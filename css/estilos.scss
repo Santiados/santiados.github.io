@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right,#cb2d3e,#ef473a);
+}
+
+#cuerpo {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	> div {
+		display: flex;
+		justify-content: center;
+	}
+	#card-show {
+		margin-top: 5pc;
+		background: #F3ECEC;
+		width: 80%;
+		border-radius: 0px 0px 5px 5px; 
+		border-bottom: 5px solid #540841;
+		padding: 5% 1%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		box-shadow: 10px 5px 5px rgba(0,0,0,0.5);
+		> * {
+			margin: 2pc 0;
+			width: 100%;
+			text-align: center;
+		}
+		#projects {
+			display: inline-flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			div.project {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 2pc 0;
+				a {
+					transition: 500ms ease;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+					&:hover{
+						animation: bzz;
+						animation-duration: 200ms;
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+@keyframes bzz {
+	0% {
+		transform: rotate(0deg);
+	}
+	33%{
+		transform: rotate(-50deg);
+	}
+
+	66% {
+		transform: rotate(50deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+
+
+
+@media screen and (max-width: 780px){
+	#cuerpo > div {
+		display: block;
+	}
+}
