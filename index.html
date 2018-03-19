@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="author" content="Santiago Rengifo">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Santiados</title>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Santiados</title>
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="css/animaciones.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
   <style type="text/css">
 
 </style>
@@ -17,49 +18,101 @@
 
     <div class="container-fluid" >
       <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <a class="navbar-brand" href="#">Perfil</a>
+        <a class="navbar-brand" href="https://github.com/Santiados/santiados.github.io">Github Profile</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link selected" href="#" targetid="card-show">Projects</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#" targetid="cv">CV</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#" targetid="features" >Features</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
 
-    <div id="card-show" >
-      <h2>Santiago Rengifo <span class="badge badge-secondary">Web Developer</span></h2>
+    <div id="slider-card">
 
-      <div id="projects" class="row">
-        <div class="project">
-          <h3>GamesGoal</h3>
-          <a href="https://santiados.github.io/gamesgoal-firebase/"><img src="img/store.png" alt=""></a>
-        </div>
-        <div class="project">
-          <h3>Tiempo APP</h3>
-          <a href="https://santiados.github.io/tiempo-gamesgoal/index.html"><img src="img/weather.png" alt=""></a>
-        </div>
-        <div class="project">
-          <h3>Piezas</h3>
-          <a href="https://santiados.github.io/piezas/"><img src="img/puzzle.png" alt=""></a>
+      <div class="carta card-show first" id="card-show">
+        <h2>Santiago Rengifo <span class="badge badge-secondary">Web Developer(learner)</span></h2>
+
+        <div id="projects" class="row">
+          <div class="project">
+            <h3>GamesGoal Store</h3>
+            <a href="https://santiados.github.io/gamesgoal-firebase/"><img src="img/store.png" alt=""></a>
+          </div>
+          <div class="project">
+            <h3>Weather APP</h3>
+            <a href="https://santiados.github.io/weather-app/index.html"><img src="img/weather.png" alt=""></a>
+          </div>
+          <div class="project">
+            <h3>Pieces</h3>
+            <a href="https://santiados.github.io/piezas/"><img src="img/puzzle.png" alt=""></a>
+          </div>
         </div>
       </div>
+
+      <div class="carta cv" id="cv">
+        <h2>Santiago Rengifo <span class="badge badge-secondary">Web Developer(learner)</span></h2>
+        <div class="box-cv" id="intro">
+          <h3>Introduction</h3>
+          <ul>
+            <li>I am a <strong>web learner developer </strong>. I am studying yet.</li>
+            <li>Learning about programming languages is one of mine passions, especially <strong>JavaScript</strong>.</li>
+            <li>I dont have working experience but I would like.</li>
+          </ul>
+        </div>
+        <div class="box-cv" id="skills">
+          <h3>Skills</h3>
+          <div class="skill">
+            <span>Javascript</span>
+            <div class="box-progress bg-light" percent="60%">
+              <div class="bg-info">60%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>HTML</span>
+            <div class="box-progress bg-light" percent="60%">
+              <div class="bg-info">60%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>CSS</span>
+            <div class="box-progress bg-light" percent="60%">
+              <div class="bg-info">60%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <span>PHP</span>
+            <div class="box-progress bg-light" percent="40%">
+              <div class="bg-info">40%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta" id="features">
+        <p>Lorem</p>
+      </div>
+
     </div>
 
   </div>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/bootstrap/bootstrap.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
-  <script src="js/index.js"></script>
-  <!-- <script src="js/popper.min.js"></script> -->
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+<script src="js/index.js"></script>
+<!-- <script src="js/popper.min.js"></script> -->
 <!-- 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
