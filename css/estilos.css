@@ -65,7 +65,7 @@ body {
             z-index: 1; }
             #cuerpo #slider-card .carta #projects div.project > div:hover > img {
               filter: blur(1px); }
-            #cuerpo #slider-card .carta #projects div.project > div:hover > div * {
+            #cuerpo #slider-card .carta #projects div.project > div:hover > div a {
               display: block; }
             #cuerpo #slider-card .carta #projects div.project > div img {
               width: 100%;
@@ -83,7 +83,7 @@ body {
               display: flex;
               flex-direction: row;
               justify-content: space-around; }
-              #cuerpo #slider-card .carta #projects div.project > div > div * {
+              #cuerpo #slider-card .carta #projects div.project > div > div a {
                 display: none; }
               #cuerpo #slider-card .carta #projects div.project > div > div img {
                 width: 50px;
