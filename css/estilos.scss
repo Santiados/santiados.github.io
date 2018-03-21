@@ -1,3 +1,8 @@
+/*
+Variables
+*/
+$transition:transition all 500ms ease;
+
 
 body {
 	background: linear-gradient(to right,#cb2d3e,#ef473a);
@@ -71,11 +76,38 @@ body {
 					flex-direction: column;
 					align-items: center;
 					margin: 2pc 0;
-					a {
-						transition: 500ms ease;
+					> div {
+						position: relative;
+						transition: all 500ms ease;
+						z-index: 1;
+						&:hover {
+							> img {
+								filter:blur(1px);
+							}
+						}
 						img {
 							width: 100%;
 							height: 100%;
+							transition: all 500ms ease;
+						}
+						> div {
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							bottom: 1%;
+							margin: 0;
+							left: 0;
+							right: 0;
+							z-index: 1000;
+							display: flex;
+							flex-direction: row;
+							justify-content: space-around;
+							img {
+								width: 50px;
+								height: 50px;
+								animation-name: showLinksProjects;
+								animation-duration: 500ms;
+							}
 						}
 					}
 				}
@@ -145,5 +177,8 @@ body {
 	}
 	#intro ul *{
 		font-size: 80%;
+	}
+	#navbarNav ul li a {
+		text-align: center;
 	}
 }

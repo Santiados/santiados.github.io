@@ -1,3 +1,7 @@
+// Author: Santiago
+
+// Animations functions
+
 function hideAll(element){
 	$(element).siblings('').animate({
 		opacity: '0'},
@@ -28,14 +32,11 @@ function show(element){
 
 
 
+// Listeners
 
+var linksCards = $('ul.navbar-nav li a');
 
-var links = $('ul.navbar-nav li a');
-console.log(links)
-
-
-
-links.click(function(event) {
+linksCards.click(function(event) {
 	var element = '#' + $(event.target).attr('targetid');
 	$(this).parent().siblings('').children('').removeClass('selected')
 	$(this).addClass('selected');
@@ -52,3 +53,17 @@ links.click(function(event) {
 });
 
 
+var linksProjects = $('.project > div');
+var projects = [
+	'img/github.png',
+	'img/linkProject.png'
+];
+linksProjects.hover(function() {
+	$(this).find('.options').children('').each(function(index, el) {
+		$(el).append('<img src="' + projects[index] + '"/>');
+	});
+}, function() {
+	$(this).find('.options').children().each(function(index, el) {
+		$(el).html('');
+	});;
+});

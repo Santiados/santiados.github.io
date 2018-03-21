@@ -48,3 +48,14 @@
 		opacity: 1;
 	}
 }
+
+
+@keyframes showLinksProjects {
+	from {
+		opacity: 0;
+		transform: translate(0,-50%);
+	}
+	to {
+		transform: translate(0,0%);
+	}
+}

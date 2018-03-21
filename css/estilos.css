@@ -1,3 +1,6 @@
+/*
+Variables
+*/
 body {
   background: linear-gradient(to right, #cb2d3e, #ef473a);
   width: 100%;
@@ -56,11 +59,33 @@ body {
           flex-direction: column;
           align-items: center;
           margin: 2pc 0; }
-          #cuerpo #slider-card .carta #projects div.project a {
-            transition: 500ms ease; }
-            #cuerpo #slider-card .carta #projects div.project a img {
+          #cuerpo #slider-card .carta #projects div.project > div {
+            position: relative;
+            transition: all 500ms ease;
+            z-index: 1; }
+            #cuerpo #slider-card .carta #projects div.project > div:hover > img {
+              filter: blur(1px); }
+            #cuerpo #slider-card .carta #projects div.project > div img {
               width: 100%;
-              height: 100%; }
+              height: 100%;
+              transition: all 500ms ease; }
+            #cuerpo #slider-card .carta #projects div.project > div > div {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              bottom: 1%;
+              margin: 0;
+              left: 0;
+              right: 0;
+              z-index: 1000;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around; }
+              #cuerpo #slider-card .carta #projects div.project > div > div img {
+                width: 50px;
+                height: 50px;
+                animation-name: showLinksProjects;
+                animation-duration: 500ms; }
       #cuerpo #slider-card .carta .box-cv {
         padding: 0 1pc; }
         #cuerpo #slider-card .carta .box-cv ul {
@@ -105,6 +130,9 @@ body {
     font-size: 150%; }
 
   #intro ul * {
-    font-size: 80%; } }
+    font-size: 80%; }
+
+  #navbarNav ul li a {
+    text-align: center; } }
 
 /*# sourceMappingURL=estilos.css.map */
