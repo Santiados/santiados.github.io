@@ -41,7 +41,7 @@ linksCards.click(function(event) {
 	$(this).parent().siblings('').children('').removeClass('selected')
 	$(this).addClass('selected');
 	var boCo = $(element).attr('bgcolor');
-	$('body').css('background', boCo);
+	$('body').css('background', 'linear-gradient(to right,'+ boCo +')');
 	show(element);
 	hideAll(element);
 	$('#skills .box-progress').each(function(index, el) {
