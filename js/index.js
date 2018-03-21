@@ -2,8 +2,8 @@ function hideAll(element){
 	$(element).siblings('').animate({
 		opacity: '0'},
 		500, function() {
-		$(element).siblings('').css('display', 'none');
-	});
+			$(element).siblings('').css('display', 'none');
+		});
 	$(element).siblings('').css({
 		animationName: 'hide',
 		animationDuration: '500ms'
@@ -33,23 +33,22 @@ function show(element){
 var links = $('ul.navbar-nav li a');
 console.log(links)
 
+
+
 links.click(function(event) {
+	var element = '#' + $(event.target).attr('targetid');
 	$(this).parent().siblings('').children('').removeClass('selected')
 	$(this).addClass('selected');
-	var element = '#' + $(event.target).attr('targetid');
+	var boCo = $(element).attr('bgcolor');
+	$('body').css('background', boCo);
 	show(element);
 	hideAll(element);
-	if($(element).hasClass('cv')){
-		var ancho = $('#skills .box-progress').each(function(index, el) {
-			var ancho = $(el).attr('percent');
-			$(el).children('').animate({width:ancho}, 1500);
-		});
-	}else {
-		var ancho = $('#skills .box-progress').each(function(index, el) {
-			var ancho = $(el).attr('percent');
-			$(el).children('').animate({width:0}, 500);
-		});
-	}
+	$('#skills .box-progress').each(function(index, el) {
+		var w = ($(element).hasClass('cv'))? $(el).attr('percent') : 0 ;
+		var vel = (w==0)?500: 1500;  
+		$(el).children('').animate({width:w}, vel);
+	});
+
 });
 
 
