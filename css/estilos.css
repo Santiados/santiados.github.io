@@ -2,140 +2,255 @@
 Variables
 */
 body {
+  background: -webkit-gradient(linear, left top, right top, from(#cb2d3e), to(#ef473a));
   background: linear-gradient(to right, #cb2d3e, #ef473a);
   width: 100%;
   height: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 #cuerpo {
   margin: 1% 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
-  #cuerpo > div {
-    display: flex;
-    justify-content: center; }
-  #cuerpo #navbarNav ul li a {
-    transition: all 500ms ease;
-    text-align: center; }
-  #cuerpo #slider-card {
-    width: 100%;
-    position: relative; }
-    #cuerpo #slider-card > div:nth-of-type(1) {
-      animation-name: show;
-      animation-duration: 1s; }
-      #cuerpo #slider-card > div:nth-of-type(1) > * {
-        animation-name: parallax; }
-    #cuerpo #slider-card > div:not(:nth-of-type(1)) {
-      opacity: 0;
-      display: none; }
-    #cuerpo #slider-card .carta {
-      position: absolute;
-      margin-top: 5pc;
-      background: #F3ECEC;
-      width: 80%;
-      border-radius: 0px 0px 5px 5px;
-      border-bottom: 5px solid #540841;
-      padding: 5% 1%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5); }
-      #cuerpo #slider-card .carta > * {
-        margin: 2pc 0;
-        width: 100%;
-        text-align: center;
-        animation-duration: 1.1s; }
-      #cuerpo #slider-card .carta #projects {
-        display: inline-flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-wrap: wrap; }
-        #cuerpo #slider-card .carta #projects div.project {
-          display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
-          margin: 2pc 0; }
-          #cuerpo #slider-card .carta #projects div.project > div {
-            position: relative;
-            transition: all 500ms ease;
-            z-index: 1; }
-            #cuerpo #slider-card .carta #projects div.project > div:hover > img {
-              filter: blur(1px); }
-            #cuerpo #slider-card .carta #projects div.project > div:hover > div a {
-              display: block; }
-            #cuerpo #slider-card .carta #projects div.project > div img {
-              width: 100%;
-              height: 100%;
-              transition: all 500ms ease; }
-            #cuerpo #slider-card .carta #projects div.project > div > div {
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              bottom: 1%;
-              margin: 0;
-              left: 0;
-              right: 0;
-              z-index: 1000;
-              display: flex;
-              flex-direction: row;
-              justify-content: space-around; }
-              #cuerpo #slider-card .carta #projects div.project > div > div a {
-                display: none;
-                width: 50px;
-                height: 50px; }
-              #cuerpo #slider-card .carta #projects div.project > div > div img {
-                animation-name: showLinksProjects;
-                animation-duration: 500ms; }
-      #cuerpo #slider-card .carta .box-cv {
-        padding: 0 1pc; }
-        #cuerpo #slider-card .carta .box-cv ul {
-          font-size: 150%;
-          text-align: left;
-          padding: 1% 2pc; }
-        #cuerpo #slider-card .carta .box-cv h3 {
-          width: 100%;
-          text-align: left; }
-      #cuerpo #slider-card .carta #skills {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap; }
-        #cuerpo #slider-card .carta #skills > div {
-          display: flex;
+}
+
+#cuerpo > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cuerpo #navbarNav ul li a {
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  text-align: center;
+}
+
+#cuerpo #slider-card {
+  width: 100%;
+  position: relative;
+}
+
+#cuerpo #slider-card > div:nth-of-type(1) {
+  -webkit-animation-name: show;
+          animation-name: show;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#cuerpo #slider-card > div:nth-of-type(1) > * {
+  -webkit-animation-name: parallax;
+          animation-name: parallax;
+}
+
+#cuerpo #slider-card > div:not(:nth-of-type(1)) {
+  opacity: 0;
+  display: none;
+}
+
+#cuerpo #slider-card .carta {
+  position: absolute;
+  margin-top: 5pc;
+  background: #F3ECEC;
+  width: 80%;
+  border-radius: 0px 0px 5px 5px;
+  border-bottom: 5px solid #540841;
+  padding: 5% 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
           flex-direction: column;
-          position: relative;
-          margin: 1pc 0; }
-          #cuerpo #slider-card .carta #skills > div > div {
-            width: 100%;
-            border: 3px solid;
-            border-radius: 3px; }
-            #cuerpo #slider-card .carta #skills > div > div > div {
-              width: 0;
-              height: 30px;
-              text-align: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#cuerpo #slider-card .carta > * {
+  margin: 2pc 0;
+  width: 100%;
+  text-align: center;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+#cuerpo #slider-card .carta #projects {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#cuerpo #slider-card .carta #projects div.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2pc 0;
+}
+
+#cuerpo #slider-card .carta #projects div.project > div {
+  position: relative;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  z-index: 1;
+}
+
+#cuerpo #slider-card .carta #projects div.project > div:hover > img {
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+#cuerpo #slider-card .carta #projects div.project > div:hover > div a {
+  display: block;
+}
+
+#cuerpo #slider-card .carta #projects div.project > div img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+#cuerpo #slider-card .carta #projects div.project > div > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 1%;
+  margin: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#cuerpo #slider-card .carta #projects div.project > div > div a {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+
+#cuerpo #slider-card .carta #projects div.project > div > div img {
+  -webkit-animation-name: showLinksProjects;
+          animation-name: showLinksProjects;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+}
+
+#cuerpo #slider-card .carta .box-cv {
+  padding: 0 1pc;
+}
+
+#cuerpo #slider-card .carta .box-cv ul {
+  font-size: 150%;
+  text-align: left;
+  padding: 1% 2pc;
+}
+
+#cuerpo #slider-card .carta .box-cv h3 {
+  width: 100%;
+  text-align: left;
+}
+
+#cuerpo #slider-card .carta #skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#cuerpo #slider-card .carta #skills > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin: 1pc 0;
+}
+
+#cuerpo #slider-card .carta #skills > div > div {
+  width: 100%;
+  border: 3px solid;
+  border-radius: 3px;
+}
+
+#cuerpo #slider-card .carta #skills > div > div > div {
+  width: 0;
+  height: 30px;
+  text-align: center;
+}
 
 @media screen and (max-width: 980px) {
   #cuerpo > div:nth-of-type(1) {
-    display: block; } }
+    display: block;
+  }
+}
+
 @media screen and (min-width: 550px) {
   #skills > div {
-    width: 45%; }
-
+    width: 45%;
+  }
   .carta h2 {
-    font-size: 200%; } }
+    font-size: 200%;
+  }
+}
+
 @media screen and (max-width: 550px) {
   #skills > div {
-    width: 90%; }
-
+    width: 90%;
+  }
   .carta h2 {
-    font-size: 150%; }
-
+    font-size: 150%;
+  }
   #intro ul * {
-    font-size: 80%; }
-
+    font-size: 80%;
+  }
   #navbarNav ul li a {
-    text-align: center; } }
-
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=estilos.css.map */
