@@ -1,152 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="author" content="Santiago Rengifo">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Santiados</title>
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
-  <link rel="stylesheet" type="text/css" href="css/animaciones.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"> -->
   <style type="text/css">
 
-</style>
+  </style>
 </head>
-<body >
-	<div id="cuerpo">
 
-    <div class="container-fluid" >
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-        <a class="navbar-brand" href="https://github.com/Santiados" target="_blank">Github Profile</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link selected" href="#" targetid="card-show">Projects</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#" targetid="cv">CV</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#" targetid="features" >Features</a>
-            </li>
+<body>
+  <div id="god">
+    <header>
+      <nav>
+        <div class="me_options">
+          <ul>
+            <li>ME</li>
+            <li>Projects</li>
+            <li>Things</li>
           </ul>
         </div>
       </nav>
-    </div>
-
-    <div id="slider-card">
-
-      <div class="carta card-show first" id="card-show" bgcolor="#cb2d3e,#ef473a">
-        <h2>Santiago Rengifo <span class="badge badge-secondary">Web Developer(learner)</span></h2>
-
-        <div id="projects" class="row">
-          <div class="project">
-            <h3>GamesGoal Store</h3>
-            <div>
-              <img src="img/store.png" alt="">
-              <div class="options">
-                <!-- Links projects -->
-                <a href="https://github.com/Santiados/gamesgoal-firebase" target="_blank"></a>
-                <a href="https://santiados.github.io/gamesgoal-firebase/" target="_blank"></a>
+    </header>
+    <section>
+      <div id="me_card" class="sections">
+        <div id="me_avatar">
+          <img src="img/perfil2.jpg" alt="">
+        </div>
+        <div id="me_text">
+          <span id="typer" class="pieces">
+            <span id="me_full_name">Santiago Rengifo De La Cruz</span>
+            <span id="typos">I am a <special></special></span>
+          </span>
+          <span style="font-size:3pc">History</span>
+          <span id="company" class="pieces merits">
+            <p><b>December 2018</b></p>
+            <p>I finished my practices in <b>Medmesafe</b> in <b>Madrid</b></p>
+            <div class="gained_skills">
+              <p><b>Skills++:</b></p>
+              <div class="skills">
+                <span>PHPUnit</span>
+                <span>Opentok</span>
+                <span>Git advance</span>
               </div>
+            </div>
+          </span>
+          <span id="daw" class="pieces merits">
+            <p><b>December 2018</b></p>
+            <p>I finished my grade in <b>Web Applications Development</b> in <b>Madrid</b></p>
+            <div class="gained_skills">
+              <p><b>Skills++:</b></p>
+              <div class="skills">
+                <span>PHP</span>
+                <span>HTML5</span>
+                <span>Javascript</span>
+                <span>CSS</span>
+                <span>Git</span>
+                <span>MySQL</span>
+                <span>Linux</span>
+              </div>
+            </div>
+          </span>
+          <span id="daw" class="pieces merits">
+            <p><b>August 2018</b></p>
+            <p>MongoDB and MySQL courses in <b>UPM, Madrid</b></p>
+            <div class="gained_skills">
+              <p><b>Skills++:</b></p>
+              <div class="skills">
+                <span>MongoDB</span>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </span>
+          <span id="bachiller" class="pieces merits">
+            <p><b>September 2015</b></p>
+            <p>I finished <b>High School</b> in <b>Madrid</b></p>
+          </span>
+        </div>
+      </div>
+      <div id="me_projects" class="sections">
+        <div id="projects_title">
+          Projects? Yes, here.
+        </div>
+        <div id="projects_list">
+          <div class="project">
+            <div id="project_avatar">
+              <p>Honesty</p>
+              <img src="" alt="">
+            </div>
+            <div id="project_desc">
+              <p>Chat instantáneo para clientes que formen parte de la plataforma</p>
             </div>
           </div>
           <div class="project">
-            <h3>Weather APP</h3>
-            <div>
-              <img src="img/weather.png" alt="">
-              <div class="options">
-                <!-- Links projects -->
-                <a href="https://github.com/Santiados/weather-app" target="_blank"></a>
-                <a href="https://santiados.github.io/weather-app/index.html" target="_blank"></a>
-              </div>
+            <div id="project_avatar">
+              <p>GamesGoal</p>
+              <img src="" alt="">
+            </div>
+            <div id="project_desc">
+              <p>Esta es una bonita aplicacion</p>
             </div>
           </div>
           <div class="project">
-            <h3>Pieces</h3>
-            <div>
-              <img src="img/puzzle.png" alt="">
-              <div class="options">
-                <!-- Links projects -->
-                <a href="https://github.com/Santiados/piezas" target="_blank"></a>
-                <a href="https://santiados.github.io/piezas/" target="_blank"></a>
-              </div>
+            <div id="project_avatar">
+              <p>Weather App</p>
+              <img src="" alt="">
+            </div>
+            <div id="project_desc">
+              <p>Weather app</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="carta cv" id="cv" bgcolor="#314755,#26a0da">
-        <h2>Santiago Rengifo <span class="badge badge-secondary">Web Developer(learner)</span></h2>
-        <div class="box-cv" id="intro">
-          <h3>Introduction</h3>
-          <ul>
-            <li>I am a <strong>web learner developer </strong>. I am studying yet.</li>
-            <li>Learning about programming languages is one of mine passions, especially <strong>JavaScript</strong>.</li>
-            <li>I dont have working experience but I would like.</li>
-          </ul>
-        </div>
-        <div class="box-cv" id="skills" >
-          <h3>Skills</h3>
-          <div class="skill">
-            <span>Javascript</span>
-            <div class="box-progress bg-light" percent="60%">
-              <div class="bg-info">60%</div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>HTML</span>
-            <div class="box-progress bg-light" percent="60%">
-              <div class="bg-info">60%</div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>CSS</span>
-            <div class="box-progress bg-light" percent="60%">
-              <div class="bg-info">60%</div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>PHP</span>
-            <div class="box-progress bg-light" percent="40%">
-              <div class="bg-info">40%</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="carta" id="features" bgcolor="#11998e,#38ef7d">
-        <p>Lot of work to do</p>
-      </div>
-
-    </div>
-
+    </section>
+    <footer></footer>
   </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/typer.js"></script>
+  <script src="js/index.js"></script>
+</body>
 
-</div>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
-<script src="js/index.js"></script>
-<!-- <script src="js/popper.min.js"></script> -->
-<!-- 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-
-  <script >
-  	
-  	$(document).ready(function(){
-      $('[data-toggle="popover"]').popover(); 
-    });
-
-
-
-  </script>
-</body>	
-</html>	  
+</html>

@@ -1,31 +1,35 @@
-/*
-Variables
-*/
-body {
-  background: -webkit-gradient(linear, left top, right top, from(#cb2d3e), to(#ef473a));
-  background: linear-gradient(to right, #cb2d3e, #ef473a);
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-#cuerpo {
-  margin: 1% 0;
+#god {
   width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-#cuerpo > div {
+.toggle-header {
+  background: #666666;
+  opacity: 0.95;
+  color: white;
+}
+
+header {
+  transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  height: 5pc;
+  -webkit-box-shadow: 4px 0px 6px 1px grey;
+          box-shadow: 4px 0px 6px 1px grey;
+  line-height: 5pc;
+  position: fixed;
+  width: 100%;
+  z-index: 9999999999;
+}
+
+header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,42 +38,26 @@ body {
           justify-content: center;
 }
 
-#cuerpo #navbarNav ul li a {
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-  text-align: center;
+header nav .me_options ul {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#cuerpo #slider-card {
-  width: 100%;
-  position: relative;
+header nav .me_options ul li {
+  margin: 0 5px;
+  padding: 5px 10px;
 }
 
-#cuerpo #slider-card > div:nth-of-type(1) {
-  -webkit-animation-name: show;
-          animation-name: show;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-#cuerpo #slider-card > div:nth-of-type(1) > * {
-  -webkit-animation-name: parallax;
-          animation-name: parallax;
-}
-
-#cuerpo #slider-card > div:not(:nth-of-type(1)) {
-  opacity: 0;
-  display: none;
-}
-
-#cuerpo #slider-card .carta {
-  position: absolute;
-  margin-top: 5pc;
-  background: #F3ECEC;
-  width: 80%;
-  border-radius: 0px 0px 5px 5px;
-  border-bottom: 5px solid #540841;
-  padding: 5% 1%;
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,77 +68,141 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-#cuerpo #slider-card .carta > * {
-  margin: 2pc 0;
+section .sections {
+  margin: 1.5pc 0;
   width: 100%;
-  text-align: center;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
 }
 
-#cuerpo #slider-card .carta #projects {
+section #me_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section #me_card > div {
+  margin: 1.5pc 0;
+}
+
+section #me_card #me_avatar {
+  z-index: 9999999;
+  -webkit-transform: translate(0%, 50%);
+          transform: translate(0%, 50%);
+  position: absolute;
+}
+
+section #me_card #me_avatar img {
+  height: 8pc;
+  width: 8pc;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+section #me_card #me_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+section #me_card #me_text > *:not(#typer) {
+  width: 60%;
+}
+
+section #me_card #me_text #typer {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: url("../img/ecuador.jpg");
+  background-position: 0% 40%;
+  height: 40pc;
+  border-radius: 0 0 10pc 10pc;
+  transform: translate(0%, -40%);
+  -webkit-transform: translate(0%, -10%);
+  -moz-transform: translate(0%, -10%);
+  -ms-transform: translate(0%, -10%);
+  -o-transform: translate(0%, -10%);
+}
+
+section #me_card #me_text #typer > * {
+  margin: 10px 0;
+  transform: translate(0%, 100%);
+  -webkit-transform: translate(0%, 100%);
+  -moz-transform: translate(0%, 100%);
+  -ms-transform: translate(0%, 100%);
+  -o-transform: translate(0%, 100%);
+}
+
+section #me_card #me_text #typer #me_full_name {
+  font-size: 2.5pc;
+}
+
+section #me_card #me_text #typer #typos {
+  font-size: 2pc;
+}
+
+section #me_card #me_text #typer #typos special {
+  padding: 2px 5px;
+  border: 2px dotted #ffffff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+section #me_card #me_text .pieces {
+  margin: 1pc 0;
+}
+
+section #me_card #me_text .merits > * {
+  margin: 10px 0;
+}
+
+section #me_card #me_text .merits .gained_skills {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-#cuerpo #slider-card .carta #projects div.project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2pc 0;
+section #me_card #me_text .merits .gained_skills > * {
+  margin: 0 5px;
 }
 
-#cuerpo #slider-card .carta #projects div.project > div {
-  position: relative;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-  z-index: 1;
-}
-
-#cuerpo #slider-card .carta #projects div.project > div:hover > img {
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
-}
-
-#cuerpo #slider-card .carta #projects div.project > div:hover > div a {
-  display: block;
-}
-
-#cuerpo #slider-card .carta #projects div.project > div img {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
-
-#cuerpo #slider-card .carta #projects div.project > div > div {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 1%;
-  margin: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+section #me_card #me_text .merits .gained_skills div.skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,49 +210,32 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#cuerpo #slider-card .carta #projects div.project > div > div a {
-  display: none;
-  width: 50px;
-  height: 50px;
-}
-
-#cuerpo #slider-card .carta #projects div.project > div > div img {
-  -webkit-animation-name: showLinksProjects;
-          animation-name: showLinksProjects;
-  -webkit-animation-duration: 500ms;
-          animation-duration: 500ms;
-}
-
-#cuerpo #slider-card .carta .box-cv {
-  padding: 0 1pc;
-}
-
-#cuerpo #slider-card .carta .box-cv ul {
-  font-size: 150%;
-  text-align: left;
-  padding: 1% 2pc;
-}
-
-#cuerpo #slider-card .carta .box-cv h3 {
-  width: 100%;
-  text-align: left;
-}
-
-#cuerpo #slider-card .carta #skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-#cuerpo #slider-card .carta #skills > div {
+section #me_card #me_text .merits .gained_skills div.skills span {
+  padding: 2px 4px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 5px 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+}
+
+section #me_card #me_text .merits .gained_skills div.skills span:hover {
+  background: #4e5050;
+  color: white;
+}
+
+section #me_projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,49 +243,169 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  margin: 1pc 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#cuerpo #slider-card .carta #skills > div > div {
+section #me_projects #projects_title {
+  width: 60%;
+  font-size: 2pc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section #me_projects #projects_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  border: 3px solid;
-  border-radius: 3px;
 }
 
-#cuerpo #slider-card .carta #skills > div > div > div {
-  width: 0;
-  height: 30px;
-  text-align: center;
+section #me_projects #projects_list .project:nth-of-type(1) {
+  background: #13d152;
 }
 
-@media screen and (max-width: 980px) {
-  #cuerpo > div:nth-of-type(1) {
-    display: block;
-  }
+section #me_projects #projects_list .project:nth-of-type(1) #project_avatar {
+  -webkit-box-shadow: 0px 0px 0px 100pc #13d152;
+          box-shadow: 0px 0px 0px 100pc #13d152;
 }
 
-@media screen and (min-width: 550px) {
-  #skills > div {
-    width: 45%;
-  }
-  .carta h2 {
-    font-size: 200%;
-  }
+section #me_projects #projects_list .project:nth-of-type(1) #project_desc {
+  color: #13d152;
 }
 
-@media screen and (max-width: 550px) {
-  #skills > div {
-    width: 90%;
-  }
-  .carta h2 {
-    font-size: 150%;
-  }
-  #intro ul * {
-    font-size: 80%;
-  }
-  #navbarNav ul li a {
-    text-align: center;
-  }
+section #me_projects #projects_list .project:nth-of-type(2) {
+  background: #c5163c;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+section #me_projects #projects_list .project:nth-of-type(2) #project_avatar {
+  -webkit-box-shadow: 0px 0px 0px 100pc #c5163c;
+          box-shadow: 0px 0px 0px 100pc #c5163c;
+}
+
+section #me_projects #projects_list .project:nth-of-type(2) #project_desc {
+  color: #c5163c;
+}
+
+section #me_projects #projects_list .project:nth-of-type(3) {
+  background: #257eb9;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section #me_projects #projects_list .project:nth-of-type(3) #project_avatar {
+  -webkit-box-shadow: 0px 0px 0px 100pc #257eb9;
+          box-shadow: 0px 0px 0px 100pc #257eb9;
+}
+
+section #me_projects #projects_list .project:nth-of-type(3) #project_desc {
+  color: #257eb9;
+}
+
+section #me_projects #projects_list .project {
+  width: 100%;
+  height: 10pc;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  overflow: hidden;
+  transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+}
+
+section #me_projects #projects_list .project * {
+  transition: all 300ms ease-in;
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -ms-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+}
+
+section #me_projects #projects_list .project > * {
+  margin: 0 1pc;
+}
+
+section #me_projects #projects_list .project #project_avatar {
+  width: 8pc;
+  height: 8pc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100%;
+  position: relative;
+  background: white;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+section #me_projects #projects_list .project #project_avatar::after {
+  content: '';
+  position: absolute;
+  height: 8pc;
+  width: 8pc;
+  border: 5px solid #302f2f;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+section #me_projects #projects_list .project #project_desc {
+  width: 40%;
+}
+
+section #me_projects #projects_list .project:hover {
+  background: white;
+}
+
+section #me_projects #projects_list .project:hover #project_avatar {
+  background: #4e5050;
+  color: white;
+  -webkit-box-shadow: 0px 0px 0px 0pc white;
+          box-shadow: 0px 0px 0px 0pc white;
+  font-size: 1.1pc;
+}
+
+section #me_projects #projects_list .project:hover #project_desc {
+  color: #555151;
 }
 /*# sourceMappingURL=estilos.css.map */
