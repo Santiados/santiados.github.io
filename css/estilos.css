@@ -239,7 +239,6 @@ section #me_card #me_text #typer {
 }
 
 section #me_card #me_text #typer > * {
-  margin: 10px 0;
   transform: translate(0%, 100%);
   -webkit-transform: translate(0%, 100%);
   -moz-transform: translate(0%, 100%);
@@ -587,35 +586,10 @@ section #me_projects #projects_list .project:hover #project_desc {
   color: #555151;
 }
 
-@media screen and (max-width: 360px) {
-  #me_name {
-    position: absolute;
-    height: 1pc;
-    width: 100%;
-    font-size: 1pc;
-  }
-  #typos special {
-    font-size: 1.5pc;
-    color: white;
-  }
-  #typos {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .project {
-    height: 25pc;
-  }
-  .project #project_avatar {
-    width: 60%;
-  }
-  .project #project_desc {
-    width: 40%;
-  }
-}
-
 @media screen and (min-width: 360px) {
+  #typer > * {
+    margin: 10px 0;
+  }
   #me_full_name {
     font-size: 2.5pc;
   }
@@ -628,6 +602,43 @@ section #me_projects #projects_list .project:hover #project_desc {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .project {
+    height: 25pc;
+  }
+  .project #project_avatar {
+    width: 60%;
+  }
+  .project #project_desc {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #typer > * {
+    margin: 0;
+  }
+  #me_full_name {
+    font-size: 1.5pc;
+  }
+  #me_name {
+    position: absolute;
+    height: 1pc;
+    width: 100%;
+    font-size: 1.5pc;
+  }
+  #typos special {
+    font-size: 1.5pc;
+    color: white;
+  }
+  #typos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
