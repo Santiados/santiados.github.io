@@ -21,8 +21,3 @@ function scrollTo(selector = null) {
     }, 500);
 };
 
-
-$('.spy').click(function (e) {
-    var target = $(this).attr('scrollTo');
-    scrollTo(target);
-});
