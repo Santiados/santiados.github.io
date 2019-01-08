@@ -68,6 +68,10 @@
   color: white;
 }
 
+.title {
+  font-size: 3pc;
+}
+
 header {
   transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
@@ -201,10 +205,6 @@ section #me_card #me_text {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-}
-
-section #me_card #me_text .title {
-  font-size: 3pc;
 }
 
 section #me_card #me_text > *:not(#typer) {
@@ -495,10 +495,9 @@ section #me_projects #projects_list .project:nth-of-type(4) #project_desc {
 
 section #me_projects #projects_list .project {
   width: 100%;
-  height: 10pc;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -605,6 +604,15 @@ section #me_projects #projects_list .project:hover #project_desc {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .project {
+    height: 25pc;
+  }
+  .project #project_avatar {
+    width: 60%;
+  }
+  .project #project_desc {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 360px) {
@@ -613,6 +621,13 @@ section #me_projects #projects_list .project:hover #project_desc {
   }
   #me_name {
     position: absolute;
+  }
+  .project {
+    height: 10pc;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

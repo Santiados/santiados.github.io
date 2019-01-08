@@ -83,6 +83,10 @@ $littleMarginV: 1.5pc 0;
     }
 }
 
+.title {
+    font-size: 3pc;
+}
+
 header {
     transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
@@ -170,9 +174,6 @@ section {
             flex-direction: column;
             align-items: center;
             width: 100%;
-            .title {
-                font-size: 3pc;
-            }
             >*:not(#typer) {
                 width: 60%;
             }
@@ -349,8 +350,7 @@ section {
             }
             .project {
                 width: 100%;
-                height: 10pc;
-                display: inline-flex;
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 align-content: center;
@@ -423,6 +423,15 @@ section {
     #typos {
         flex-direction: column;
     }
+    .project {
+        height: 25pc;
+    }
+    .project #project_avatar {
+        width: 60%;
+    }
+    .project #project_desc {
+        width: 40%;
+    }
 }
 
 @media screen and(min-width:360px) {
@@ -431,5 +440,9 @@ section {
     }
     #me_name {
         position: absolute;
+    }
+    .project {
+        height: 10pc;
+        flex-direction: row;
     }
 }
