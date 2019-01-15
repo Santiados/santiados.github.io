@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #god {
@@ -155,7 +160,7 @@ section {
 }
 
 section .sections {
-  margin: 1.5pc 0;
+  margin-top: 1.5pc;
   width: 100%;
 }
 
@@ -425,7 +430,7 @@ section #me_projects #projects_list {
 }
 
 section #me_projects #projects_list .project:nth-of-type(1) {
-  background: #13d152;
+  background: #0dc54b;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -433,12 +438,12 @@ section #me_projects #projects_list .project:nth-of-type(1) {
 }
 
 section #me_projects #projects_list .project:nth-of-type(1) #project_avatar {
-  -webkit-box-shadow: 0px 0px 0px 100pc #13d152;
-          box-shadow: 0px 0px 0px 100pc #13d152;
+  -webkit-box-shadow: 0px 0px 0px 100pc #0dc54b;
+          box-shadow: 0px 0px 0px 100pc #0dc54b;
 }
 
-section #me_projects #projects_list .project:nth-of-type(1) #project_desc {
-  color: #13d152;
+section #me_projects #projects_list .project:nth-of-type(1) #project_desc *:not(.project_date) {
+  color: #0dc54b;
 }
 
 section #me_projects #projects_list .project:nth-of-type(2) {
@@ -454,7 +459,7 @@ section #me_projects #projects_list .project:nth-of-type(2) #project_avatar {
           box-shadow: 0px 0px 0px 100pc #c5163c;
 }
 
-section #me_projects #projects_list .project:nth-of-type(2) #project_desc {
+section #me_projects #projects_list .project:nth-of-type(2) #project_desc *:not(.project_date) {
   color: #c5163c;
 }
 
@@ -471,7 +476,7 @@ section #me_projects #projects_list .project:nth-of-type(3) #project_avatar {
           box-shadow: 0px 0px 0px 100pc #257eb9;
 }
 
-section #me_projects #projects_list .project:nth-of-type(3) #project_desc {
+section #me_projects #projects_list .project:nth-of-type(3) #project_desc *:not(.project_date) {
   color: #257eb9;
 }
 
@@ -488,7 +493,7 @@ section #me_projects #projects_list .project:nth-of-type(4) #project_avatar {
           box-shadow: 0px 0px 0px 100pc #78067c;
 }
 
-section #me_projects #projects_list .project:nth-of-type(4) #project_desc {
+section #me_projects #projects_list .project:nth-of-type(4) #project_desc *:not(.project_date) {
   color: #78067c;
 }
 
@@ -568,6 +573,27 @@ section #me_projects #projects_list .project #project_desc {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+section #me_projects #projects_list .project #project_desc .project_date {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  color: #2e2d2d;
+  font-size: 1.2pc;
+  top: 50%;
+  bottom: 50%;
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section #me_projects #projects_list .project:hover {
@@ -586,15 +612,108 @@ section #me_projects #projects_list .project:hover #project_desc {
   color: #555151;
 }
 
+section #me_projects #projects_list .project:hover #project_desc .project_date {
+  opacity: 0;
+}
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  min-height: 20pc;
+}
+
+footer::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.9;
+  position: absolute;
+  padding: 2pc 0;
+}
+
+footer::after {
+  position: absolute;
+  text-align: center;
+  font-size: 1.5pc;
+  vertical-align: 1.5pc;
+  content: 'By Santi Fiestas';
+  width: 10pc;
+  height: 1pc;
+  color: #9c9c9c;
+  right: 0;
+}
+
+footer > div {
+  width: 80%;
+}
+
+footer #me_connect {
+  z-index: 9999;
+  margin-top: 4pc;
+  position: relative;
+}
+
+footer #me_connect * {
+  color: #949191;
+}
+
+footer #me_connect .title {
+  margin: 2pc 0;
+}
+
+footer #me_connect #me_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer #me_connect #me_links .profile_links {
+  margin: 1pc 5px;
+}
+
+footer #me_connect #me_links .profile_links a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer #me_connect #me_links .profile_links a img {
+  width: 3pc;
+  height: 3pc;
+}
+
 @media screen and (min-width: 360px) {
   #typer > * {
     margin: 10px 0;
   }
-  #me_full_name {
-    font-size: 2.5pc;
-  }
   #me_name {
     position: absolute;
+  }
+  #me_full_name {
+    font-size: 2.5pc;
   }
   .project {
     height: 10pc;
@@ -602,6 +721,28 @@ section #me_projects #projects_list .project:hover #project_desc {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  #me_links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50%;
+  }
+  .profile_links {
+    width: 45%;
+  }
+  footer::after {
+    bottom: 1pc;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .project {
+    height: 20pc;
+  }
+  #me_links {
+    width: 90%;
   }
 }
 
@@ -614,6 +755,19 @@ section #me_projects #projects_list .project:hover #project_desc {
   }
   .project #project_desc {
     width: 40%;
+  }
+  #me_links {
+    width: 80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile_links {
+    width: 100%;
+  }
+  footer::after {
+    bottom: 0px;
   }
 }
 
@@ -628,7 +782,7 @@ section #me_projects #projects_list .project:hover #project_desc {
     position: absolute;
     height: 1pc;
     width: 100%;
-    font-size: 1.5pc;
+    font-size: 1.1pc;
   }
   #typos special {
     font-size: 1.5pc;
@@ -639,6 +793,15 @@ section #me_projects #projects_list .project:hover #project_desc {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #me_links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile_links {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

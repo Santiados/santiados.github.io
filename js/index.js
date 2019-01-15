@@ -3,6 +3,9 @@
 
 
 (function () {
+    if ($(this).scrollTop() > 120) {
+        $('header').addClass('toggle-header');
+    }
     $(document).scroll(function (e) {
         if ($(this).scrollTop() > 120) {
             $('header').addClass('toggle-header');

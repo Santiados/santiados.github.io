@@ -3,6 +3,12 @@ $littleMarginV: 1.5pc 0;
     margin: 0;
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #god {
@@ -20,6 +26,9 @@ $littleMarginV: 1.5pc 0;
     }
     #project_desc {
         color: #555151;
+        .project_date {
+            opacity: 0;
+        }
     }
 }
 
@@ -30,7 +39,9 @@ $littleMarginV: 1.5pc 0;
         box-shadow: 0px 0px 0px 100pc $back;
     }
     #project_desc {
-        color: $back;
+        *:not(.project_date) {
+            color: $back;
+        }
     }
 }
 
@@ -145,7 +156,7 @@ section {
     flex-direction: column;
     align-items: center;
     .sections {
-        margin: $littleMarginV;
+        margin-top: 1.5pc;
         width: 100%;
     }
     #me_card {
@@ -332,7 +343,7 @@ section {
             flex-direction: column;
             width: 100%;
             .project:nth-of-type(1) {
-                @include project-theme(#13d152,
+                @include project-theme(#0dc54b,
                 row);
             }
             .project:nth-of-type(2) {
@@ -399,6 +410,20 @@ section {
                     width: 40%;
                     display: flex;
                     flex-direction: column;
+                    position: relative;
+                    .project_date {
+                        position: absolute;
+                        width: 100%;
+                        height: 40%;
+                        color: #2e2d2d;
+                        font-size: 1.2pc;
+                        top: 50%;
+                        bottom: 50%;
+                        margin: auto 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
                 &:hover {
                     @include show-project;
@@ -408,20 +433,100 @@ section {
     }
 }
 
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 20pc;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.9;
+        position: absolute;
+        padding: 2pc 0;
+    }
+    &::after {
+        position: absolute;
+        text-align: center;
+        font-size: 1.5pc;
+        vertical-align: 1.5pc;
+        content: 'By Santi Fiestas';
+        width: 10pc;
+        height: 1pc;
+        color: #9c9c9c;
+        right: 0;
+    }
+    >div {
+        width: 80%;
+    }
+    #me_connect {
+        z-index: 9999;
+        margin-top: 4pc;
+        position: relative;
+        * {
+            color: #949191;
+        }
+        .title {
+            margin: 2pc 0;
+        }
+        #me_links {
+            display: flex;
+            flex-wrap: wrap;
+            .profile_links {
+                margin: 1pc 5px;
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    img {
+                        width: 3pc;
+                        height: 3pc;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // medias
 @media screen and(min-width:360px) {
-    #typer > * {
+    #typer>* {
         margin: 10px 0;
-    }
-    #me_full_name {
-        font-size: 2.5pc;
     }
     #me_name {
         position: absolute;
     }
+    #me_full_name {
+        font-size: 2.5pc;
+    }
     .project {
         height: 10pc;
         flex-direction: row;
+    }
+    #me_links {
+        flex-direction: row;
+        width: 50%;
+    }
+    .profile_links {
+        width: 45%;
+    }
+    footer::after {
+        bottom: 1pc;
+    }
+}
+
+@media screen and(max-width: 760px) {
+    .project {
+        height: 20pc;
+    }
+    #me_links {
+        width: 90%;
     }
 }
 
@@ -435,10 +540,20 @@ section {
     .project #project_desc {
         width: 40%;
     }
+    #me_links {
+        width: 80%;
+        flex-direction: column;
+    }
+    .profile_links {
+        width: 100%;
+    }
+    footer::after {
+        bottom: 0px;
+    }
 }
 
 @media screen and(max-width: 360px) {
-    #typer > * {
+    #typer>* {
         margin: 0;
     }
     #me_full_name {
@@ -448,7 +563,7 @@ section {
         position: absolute;
         height: 1pc;
         width: 100%;
-        font-size: 1.5pc;
+        font-size: 1.1pc;
     }
     #typos special {
         font-size: 1.5pc;
@@ -457,4 +572,11 @@ section {
     #typos {
         flex-direction: column;
     }
+    #me_links {
+        flex-direction: column;
+    }
+    .profile_links {
+        width: 100%;
+    }
+    
 }
