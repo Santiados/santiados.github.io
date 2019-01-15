@@ -405,7 +405,6 @@ section #me_projects {
 
 section #me_projects #projects_title {
   width: 60%;
-  font-size: 2pc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
