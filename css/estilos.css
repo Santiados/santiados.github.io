@@ -429,7 +429,7 @@ section #me_projects #projects_list {
 }
 
 section #me_projects #projects_list .project:nth-of-type(1) {
-  background: #0dc54b;
+  background: #177e89;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -437,16 +437,16 @@ section #me_projects #projects_list .project:nth-of-type(1) {
 }
 
 section #me_projects #projects_list .project:nth-of-type(1) #project_avatar {
-  -webkit-box-shadow: 0px 0px 0px 100pc #0dc54b;
-          box-shadow: 0px 0px 0px 100pc #0dc54b;
+  -webkit-box-shadow: 0px 0px 0px 100pc #177e89;
+          box-shadow: 0px 0px 0px 100pc #177e89;
 }
 
 section #me_projects #projects_list .project:nth-of-type(1) #project_desc *:not(.project_date) {
-  color: #0dc54b;
+  color: #177e89;
 }
 
 section #me_projects #projects_list .project:nth-of-type(2) {
-  background: #c5163c;
+  background: #084c61;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -454,16 +454,16 @@ section #me_projects #projects_list .project:nth-of-type(2) {
 }
 
 section #me_projects #projects_list .project:nth-of-type(2) #project_avatar {
-  -webkit-box-shadow: 0px 0px 0px 100pc #c5163c;
-          box-shadow: 0px 0px 0px 100pc #c5163c;
+  -webkit-box-shadow: 0px 0px 0px 100pc #084c61;
+          box-shadow: 0px 0px 0px 100pc #084c61;
 }
 
 section #me_projects #projects_list .project:nth-of-type(2) #project_desc *:not(.project_date) {
-  color: #c5163c;
+  color: #084c61;
 }
 
 section #me_projects #projects_list .project:nth-of-type(3) {
-  background: #257eb9;
+  background: #db3a34;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -471,16 +471,16 @@ section #me_projects #projects_list .project:nth-of-type(3) {
 }
 
 section #me_projects #projects_list .project:nth-of-type(3) #project_avatar {
-  -webkit-box-shadow: 0px 0px 0px 100pc #257eb9;
-          box-shadow: 0px 0px 0px 100pc #257eb9;
+  -webkit-box-shadow: 0px 0px 0px 100pc #db3a34;
+          box-shadow: 0px 0px 0px 100pc #db3a34;
 }
 
 section #me_projects #projects_list .project:nth-of-type(3) #project_desc *:not(.project_date) {
-  color: #257eb9;
+  color: #db3a34;
 }
 
 section #me_projects #projects_list .project:nth-of-type(4) {
-  background: #78067c;
+  background: #ffc857;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -488,12 +488,12 @@ section #me_projects #projects_list .project:nth-of-type(4) {
 }
 
 section #me_projects #projects_list .project:nth-of-type(4) #project_avatar {
-  -webkit-box-shadow: 0px 0px 0px 100pc #78067c;
-          box-shadow: 0px 0px 0px 100pc #78067c;
+  -webkit-box-shadow: 0px 0px 0px 100pc #ffc857;
+          box-shadow: 0px 0px 0px 100pc #ffc857;
 }
 
 section #me_projects #projects_list .project:nth-of-type(4) #project_desc *:not(.project_date) {
-  color: #78067c;
+  color: #ffc857;
 }
 
 section #me_projects #projects_list .project {
@@ -579,7 +579,7 @@ section #me_projects #projects_list .project #project_desc .project_date {
   position: absolute;
   width: 100%;
   height: 40%;
-  color: #2e2d2d;
+  color: #fff8f8;
   font-size: 1.2pc;
   top: 50%;
   bottom: 50%;
