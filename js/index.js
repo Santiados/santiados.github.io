@@ -1,69 +1,31 @@
-// Author: Santiago
-
-// Animations functions
-
-function hideAll(element){
-	$(element).siblings('').animate({
-		opacity: '0'},
-		500, function() {
-			$(element).siblings('').css('display', 'none');
-		});
-	$(element).siblings('').css({
-		animationName: 'hide',
-		animationDuration: '500ms'
-	});
-	$(element).siblings('').children('').css({
-		animationName: 'none'
-	});
-}
-
-function show(element){
-	$(element).children('').css({
-		animationName: 'parallax'
-	});
-	
-	$(element).css({
-		opacity: '1',
-		animationDuration: '1s',
-		animationName: 'show',
-		display:'block'
-	});
-}
+// Author: Santiago Rengifo
+// Date: 10-12-2018
 
 
+(function () {
+    if ($(this).scrollTop() > 120) {
+        $('header').addClass('toggle-header');
+    }
+    $(document).scroll(function (e) {
+        if ($(this).scrollTop() > 120) {
+            $('header').addClass('toggle-header');
+        } else {
+            $('header').removeClass('toggle-header');
+        }
+    });
+})();
 
-// Listeners
-
-var linksCards = $('ul.navbar-nav li a');
-
-linksCards.click(function(event) {
-	var element = '#' + $(event.target).attr('targetid');
-	$(this).parent().siblings('').children('').removeClass('selected')
-	$(this).addClass('selected');
-	var boCo = $(element).attr('bgcolor');
-	$('body').css('background', 'linear-gradient(to right,'+ boCo +')');
-	show(element);
-	hideAll(element);
-	$('#skills .box-progress').each(function(index, el) {
-		var w = ($(element).hasClass('cv'))? $(el).attr('percent') : 0 ;
-		var vel = (w==0)?500: 1500;  
-		$(el).children('').animate({width:w}, vel);
-	});
-
-});
+function scrollTo(selector = null) {
+    var many = 0;
+    if (!selector || $(selector).length < 1) return;
+    many = $(selector).offset().top - $('header').outerHeight();
+    $('html,body').animate({
+        scrollTop: many
+    }, 500);
+};
 
 
-var linksProjects = $('.project > div');
-var projects = [
-	'img/github.png',
-	'img/linkProject.png'
-];
-linksProjects.hover(function() {
-	$(this).find('.options').children('').each(function(index, el) {
-		$(el).append('<img src="' + projects[index] + '"/>');
-	});
-}, function() {
-	$(this).find('.options').children().each(function(index, el) {
-		$(el).html('');
-	});;
+$('.spy').click(function (e) {
+    var target = $(this).attr('scrollTo');
+    scrollTo(target);
 });
